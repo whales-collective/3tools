@@ -24,7 +24,7 @@ func TestOldWayThenToolCalls(t *testing.T) {
 		t.Fatalf("Error marshalling tools to JSON: %v", err)
 	}
 	t.Logf("Tools JSON: %s", toolsJson)
-	toolsContent := "v[AVAILABLE_TOOLS]" + string(toolsJson) + "[/AVAILABLE_TOOLS]"
+	toolsContent := "[AVAILABLE_TOOLS]" + string(toolsJson) + "[/AVAILABLE_TOOLS]"
 
 	systemContentInstructions := `If the question of the user matched the description of a tool, the tool will be called.
 	To call a tool, respond with a JSON object with the following structure: 
