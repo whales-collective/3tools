@@ -23,7 +23,7 @@ func TestOldWayThenToolCalls(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Error marshalling tools to JSON: %v", err)
 	}
-	t.Logf("Tools JSON: %s", toolsJson)
+	//t.Logf("Tools JSON: %s", toolsJson)
 	toolsContent := "[AVAILABLE_TOOLS]" + string(toolsJson) + "[/AVAILABLE_TOOLS]"
 
 	systemContentInstructions := `If the question of the user matched the description of a tool, the tool will be called.
@@ -79,7 +79,7 @@ func TestOldWayThenToolCalls(t *testing.T) {
 	if result == "" {
 		t.Fatal("No content returned from chat completion")
 	}
-	t.Logf("\n\n✋ First Result: %s", result)
+	//t.Logf("\n\n✋ First Result: %s", result)
 
 	paramsNext := openai.ChatCompletionNewParams{
 		Messages: []openai.ChatCompletionMessageParamUnion{
