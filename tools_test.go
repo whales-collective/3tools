@@ -56,6 +56,7 @@ func TestToolCalls(t *testing.T) {
 		I'm Philippe
 		Add 5 and 37
 		Make a Vulcan salute to Sam
+		Say hello to Alice and then to Bob
 	`
 
 	engine, err := client.GetDMRClient()
