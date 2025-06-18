@@ -101,7 +101,7 @@ func TestToolCalls(t *testing.T) {
 	params = openai.ChatCompletionNewParams{
 		Messages:          []openai.ChatCompletionMessageParamUnion{},
 		Model:             toolModel,
-		Tools:             tools.GetToolsCatalog(),
+		Tools:             tools.GetToolsCatalog(), 
 		ParallelToolCalls: openai.Bool(false),
 		Temperature:       openai.Opt(0.0),
 	}

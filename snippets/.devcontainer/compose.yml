@@ -8,7 +8,7 @@ services:
         - "linux/arm64"
       dockerfile: Dockerfile
       args:
-        - GO_VERSION=1.24.0
+        - GO_VERSION=1.24.4
         - USER_NAME=${USER}
     #network_mode: "host"   
     volumes:
