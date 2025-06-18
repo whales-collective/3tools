@@ -18,9 +18,9 @@ type Command struct {
 // go test -v -run TestToolCalls
 func TestToolCalls(t *testing.T) {
 
-	//jsonOutputModel := "ai/qwen2.5:3B-F16"
 	jsonOutputModel := "ai/qwen2.5:latest"
-	toolModel := "ai/qwen2.5:latest"
+	//toolModel := "ai/qwen2.5:latest"
+	toolModel := "ai/qwen2.5:1.5B-F16"
 
 	schema := map[string]any{
 		"type": "array",
@@ -52,6 +52,7 @@ func TestToolCalls(t *testing.T) {
 		Add 10 and 32
 		Make a Vulcan salute to Bob Morane
 		Say Hello to Jane Doe
+		Who is Jean-Luc Picard?
 		I'm Philippe
 		Add 5 and 37
 		Make a Vulcan salute to Sam
